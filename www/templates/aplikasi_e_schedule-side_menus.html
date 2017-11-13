@@ -1,0 +1,40 @@
+<ion-side-menus enable-menu-with-back-views="false">
+	<ion-side-menu-content>
+		<ion-nav-bar ng-show="$root.headerExists" id="navbar-right-top" class="page-title bar-dark">
+			<ion-nav-back-button></ion-nav-back-button>
+			<ion-nav-buttons side="left">
+				<button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+			</ion-nav-buttons>
+			<ion-nav-buttons side="right">
+				<button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
+			</ion-nav-buttons>
+		</ion-nav-bar>
+		<ion-nav-view name="fabButtonUp"></ion-nav-view>
+		<ion-nav-view animation="none" name="aplikasi_e_schedule-side_menus"></ion-nav-view>
+	</ion-side-menu-content>
+	<ion-side-menu side="left">
+		<ion-header-bar class="text-center expanded dark-bg">
+			<img ng-src="{{ appLogo | trustUrl }}" class="avatar motion spin fade" />
+			<div class="menu-bottom"><span ng-bind-html="appName | strHTML"></span><br/></div>
+		</ion-header-bar>
+		<ion-content class="has-expanded-header light-bg positive-900">
+			<ion-list class="list" >
+				<ion-item  class="menu-dashboard item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ng-click="openWebView('http://10.114.110.10/e-asn/e-schedule')">
+					<i class="icon ion-ios-home"></i> {{ "Home" | translate }}
+				</ion-item>
+				<ion-item  class="menu-referensi item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ng-click="openWebView('http://10.114.110.10/e-asn/e-schedule/program')">
+					<i class="icon ion-android-funnel"></i> {{ "Referensi" | translate }}
+				</ion-item>
+				<ion-item  class="menu-agenda_kegiatan item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ng-click="openWebView('http://diskominfo.sumutprov.go.id')">
+					<i class="icon ion-android-calendar"></i> {{ "Agenda Kegiatan" | translate }}
+				</ion-item>
+				<ion-item  class="menu-pengumuman item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ng-click="openWebView('http://diskominfo.sumutprov.go.id')">
+					<i class="icon ion-ios-barcode-outline"></i> {{ "Pengumuman" | translate }}
+				</ion-item>
+				<ion-item  class="menu-logout item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ng-click="exitApp()">
+					<i class="icon ion-log-out"></i> {{ "Logout" | translate }}
+				</ion-item>
+			</ion-list>
+		</ion-content>
+	</ion-side-menu>
+</ion-side-menus>

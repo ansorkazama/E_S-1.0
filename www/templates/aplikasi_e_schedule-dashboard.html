@@ -1,0 +1,42 @@
+	<ion-view view-title="Dashboard" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-dashboard" class=" page-dashboard">
+		
+		<div class="dashboard-panel">
+			<!-- row -->
+			<div class="row">
+				<a class="col-33 light positive-bg ink" ng-click="openWebView('http://10.114.110.10/e-asn/e-schedule')" >
+					<i class="icon ion-ios-home" ></i>
+					<p>{{ "Home" | translate }}</p>
+				</a>
+				<a class="col-33 light positive-900-bg ink" ng-click="openWebView('http://10.114.110.10/e-asn/e-schedule/program')" >
+					<i class="icon ion-android-funnel" ></i>
+					<p>{{ "Referensi" | translate }}</p>
+				</a>
+				<a class="col-33 light calm-bg ink" ng-click="openWebView('http://diskominfo.sumutprov.go.id')" >
+					<i class="icon ion-android-calendar" ></i>
+					<p>{{ "Agenda Kegiatan" | translate }}</p>
+				</a>
+			</div>
+			<!-- ./row -->
+			
+
+			<!-- row -->
+			<div class="row">
+				<a class="col-33 light calm-900-bg ink" ng-click="openWebView('http://diskominfo.sumutprov.go.id')" >
+					<i class="icon ion-ios-barcode-outline" ></i>
+					<p>{{ "Pengumuman" | translate }}</p>
+				</a>
+				<a class="col-33 light balanced-bg ink" ng-click="exitApp()" >
+					<i class="icon ion-log-out" ></i>
+					<p>{{ "Logout" | translate }}</p>
+				</a>
+			</div>
+			<!-- ./row -->
+			
+
+		</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

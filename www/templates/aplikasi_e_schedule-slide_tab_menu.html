@@ -1,0 +1,38 @@
+	<ion-view view-title="Menu" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-slide_tab_menu" class=" page-slide_tab_menu">
+		
+	<div style="width: 100%;height:100%;">
+		<ion-slide-box class="ion-slide-tabs" slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
+			<ion-slide ion-slide-tab-label="Home" >
+					<ion-content scroll="false" class="slidingTabContent">
+						<div class="list">
+							<a class="item item-icon-left" ng-click="openWebView('http://10.114.110.10/e-asn/e-schedule/program')" >
+								<i class="icon ion-android-funnel" ></i>
+								<h2>{{ "Referensi" | translate }}</h2>
+								<span class="item-note pull-left">Referensi Program, Kegiatan, Gallery. </span>
+							</a>
+							<a class="item item-icon-left" ng-click="openWebView('http://diskominfo.sumutprov.go.id')" >
+								<i class="icon ion-android-calendar" ></i>
+								<h2>{{ "Agenda Kegiatan" | translate }}</h2>
+								<span class="item-note pull-left">Daftar Agenda Kegiatan</span>
+							</a>
+							<a class="item item-icon-left" ng-click="openWebView('http://diskominfo.sumutprov.go.id')" >
+								<i class="icon ion-ios-barcode-outline" ></i>
+								<h2>{{ "Pengumuman" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+							<a class="item item-icon-left"  >
+								<i class="icon ion-log-out" ></i>
+								<h2>{{ "Logout" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+						</div>
+					</ion-content>
+			</ion-slide>
+		</ion-slide-box>
+	</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>
