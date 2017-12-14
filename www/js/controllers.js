@@ -429,7 +429,7 @@ $ionicConfig.backButton.text("");
 // TODO: dashboardCtrl --|-- 
 .controller("dashboardCtrl", function($ionicConfig,$scope,$rootScope,$state,$location,$ionicScrollDelegate,$ionicListDelegate,$http,$httpParamSerializer,$stateParams,$timeout,$interval,$ionicLoading,$ionicPopup,$ionicPopover,$ionicActionSheet,$ionicSlideBoxDelegate,$ionicHistory,ionicMaterialInk,ionicMaterialMotion,$window,$ionicModal,base64,md5,$document,$sce,$ionicGesture,$translate){
 	
-	$rootScope.headerExists = true;
+	$rootScope.headerExists = false;
 	$rootScope.ionWidth = $document[0].body.querySelector(".view-container").offsetWidth || 412;
 	$rootScope.grid64 = parseInt($rootScope.ionWidth / 64) ;
 	$rootScope.grid80 = parseInt($rootScope.ionWidth / 80) ;

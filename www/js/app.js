@@ -166,6 +166,7 @@ angular.module("aplikasi_e_schedule", ["ngCordova","ionic","ionMdInput","ionic-m
 
 	.state("aplikasi_e_schedule.dashboard", {
 		url: "/dashboard",
+		cache:false,
 		views: {
 			"aplikasi_e_schedule-side_menus" : {
 						templateUrl:"templates/aplikasi_e_schedule-dashboard.html",
