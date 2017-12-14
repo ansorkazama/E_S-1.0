@@ -138,6 +138,7 @@ angular.module("aplikasi_e_schedule", ["ngCordova","ionic","ionMdInput","ionic-m
 			"self",
 			new RegExp('^(http[s]?):\/\/(w{3}.)?youtube\.com/.+$'),
 			new RegExp('^(http[s]?):\/\/(w{3}.)?w3schools\.com/.+$'),
+			new RegExp('^(http[s]?):\/\/(w{3}.)?google\.com/.+$'),
 		]);
 	}catch(err){
 		console.log("%cerror: %cdomain whitelist","color:blue;font-size:16px;","color:red;font-size:16px;");
@@ -163,19 +164,6 @@ angular.module("aplikasi_e_schedule", ["ngCordova","ionic","ionMdInput","ionic-m
 		}
 	})
 
-	.state("aplikasi_e_schedule.agenda_kegiatan", {
-		url: "/agenda_kegiatan",
-		views: {
-			"aplikasi_e_schedule-side_menus" : {
-						templateUrl:"templates/aplikasi_e_schedule-agenda_kegiatan.html",
-						controller: "agenda_kegiatanCtrl"
-					},
-			"fabButtonUp" : {
-						template: '',
-					},
-		}
-	})
-
 	.state("aplikasi_e_schedule.dashboard", {
 		url: "/dashboard",
 		views: {
@@ -189,12 +177,12 @@ angular.module("aplikasi_e_schedule", ["ngCordova","ionic","ionMdInput","ionic-m
 		}
 	})
 
-	.state("aplikasi_e_schedule.referensi", {
-		url: "/referensi",
+	.state("aplikasi_e_schedule.faqs", {
+		url: "/faqs",
 		views: {
 			"aplikasi_e_schedule-side_menus" : {
-						templateUrl:"templates/aplikasi_e_schedule-referensi.html",
-						controller: "referensiCtrl"
+						templateUrl:"templates/aplikasi_e_schedule-faqs.html",
+						controller: "faqsCtrl"
 					},
 			"fabButtonUp" : {
 						template: '',
@@ -202,12 +190,38 @@ angular.module("aplikasi_e_schedule", ["ngCordova","ionic","ionMdInput","ionic-m
 		}
 	})
 
-	.state("aplikasi_e_schedule.slide_tab_menu", {
-		url: "/slide_tab_menu",
+	.state("aplikasi_e_schedule.help", {
+		url: "/help",
 		views: {
 			"aplikasi_e_schedule-side_menus" : {
-						templateUrl:"templates/aplikasi_e_schedule-slide_tab_menu.html",
-						controller: "slide_tab_menuCtrl"
+						templateUrl:"templates/aplikasi_e_schedule-help.html",
+						controller: "helpCtrl"
+					},
+			"fabButtonUp" : {
+						template: '',
+					},
+		}
+	})
+
+	.state("aplikasi_e_schedule.menu_2", {
+		url: "/menu_2",
+		views: {
+			"aplikasi_e_schedule-side_menus" : {
+						templateUrl:"templates/aplikasi_e_schedule-menu_2.html",
+						controller: "menu_2Ctrl"
+					},
+			"fabButtonUp" : {
+						template: '',
+					},
+		}
+	})
+
+	.state("aplikasi_e_schedule.program", {
+		url: "/program",
+		views: {
+			"aplikasi_e_schedule-side_menus" : {
+						templateUrl:"templates/aplikasi_e_schedule-program.html",
+						controller: "programCtrl"
 					},
 			"fabButtonUp" : {
 						template: '',

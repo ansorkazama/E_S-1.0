@@ -426,114 +426,6 @@ $ionicConfig.backButton.text("");
 	controller_by_user();
 })
 
-// TODO: agenda_kegiatanCtrl --|-- 
-.controller("agenda_kegiatanCtrl", function($ionicConfig,$scope,$rootScope,$state,$location,$ionicScrollDelegate,$ionicListDelegate,$http,$httpParamSerializer,$stateParams,$timeout,$interval,$ionicLoading,$ionicPopup,$ionicPopover,$ionicActionSheet,$ionicSlideBoxDelegate,$ionicHistory,ionicMaterialInk,ionicMaterialMotion,$window,$ionicModal,base64,md5,$document,$sce,$ionicGesture,$translate){
-	
-	$rootScope.headerExists = true;
-	$rootScope.ionWidth = $document[0].body.querySelector(".view-container").offsetWidth || 412;
-	$rootScope.grid64 = parseInt($rootScope.ionWidth / 64) ;
-	$rootScope.grid80 = parseInt($rootScope.ionWidth / 80) ;
-	$rootScope.grid128 = parseInt($rootScope.ionWidth / 128) ;
-	$rootScope.grid256 = parseInt($rootScope.ionWidth / 256) ;
-	$rootScope.last_edit = "menu" ;
-	$scope.$on("$ionicView.afterEnter", function (){
-		var page_id = $state.current.name ;
-		$rootScope.page_id = page_id.replace(".","-") ;
-	});
-	if($rootScope.headerShrink == true){
-		$scope.$on("$ionicView.enter", function(){
-			$scope.scrollTop();
-		});
-	};
-	// TODO: agenda_kegiatanCtrl --|-- $scope.scrollTop
-	$rootScope.scrollTop = function(){
-		$timeout(function(){
-			$ionicScrollDelegate.$getByHandle("top").scrollTop();
-		},100);
-	};
-	// TODO: agenda_kegiatanCtrl --|-- $scope.openURL
-	// open external browser 
-	$scope.openURL = function($url){
-		window.open($url,"_system","location=yes");
-	};
-	// TODO: agenda_kegiatanCtrl --|-- $scope.openAppBrowser
-	// open AppBrowser
-	$scope.openAppBrowser = function($url){
-		var appBrowser = window.open($url,"_blank","hardwareback=Done");
-		appBrowser.addEventListener("loadstart",function(){
-			appBrowser.insertCSS({
-				code: "body{background:#100;color:#100;font-size:1px;}body:after{content:'loading...';color:#fff;font-size:72px;position:absolute;bottom:50%;left:0;right:0; text-align: center; vertical-align: middle;}"
-			});
-		});
-	
-		appWebview.addEventListener("loaderror",function(){
-			window.location = "retry.html";
-		});
-	};
-	
-	
-	// TODO: agenda_kegiatanCtrl --|-- $scope.openWebView
-	// open WebView
-	$scope.openWebView = function($url){
-		var appWebview = window.open($url,"_blank","location=no");
-		appWebview.addEventListener("loadstart",function(){
-			appWebview.insertCSS({
-				code: "body{background:#100;color:#100;font-size:1px;}body:after{content:'loading...';color:#fff;font-size:72px;position:absolute;bottom:50%;left:0;right:0; text-align: center; vertical-align: middle;}"
-			});
-		});
-	
-		appWebview.addEventListener("loaderror",function(){
-			window.location = "retry.html";
-		});
-	};
-	
-	
-	// TODO: agenda_kegiatanCtrl --|-- $scope.toggleGroup
-	$scope.toggleGroup = function(group) {
-		if ($scope.isGroupShown(group)) {
-			$scope.shownGroup = null;
-		} else {
-			$scope.shownGroup = group;
-		}
-	};
-	
-	$scope.isGroupShown = function(group) {
-		return $scope.shownGroup === group;
-	};
-	
-	// TODO: agenda_kegiatanCtrl --|-- $scope.redirect
-	// redirect
-	$scope.redirect = function($url){
-		$window.location.href = $url;
-	};
-	
-	// Set Motion
-	$timeout(function(){
-		ionicMaterialMotion.slideUp({
-			selector: ".slide-up"
-		});
-	}, 300);
-	// code 
-
-	// TODO: agenda_kegiatanCtrl --|-- controller_by_user
-	// controller by user 
-	function controller_by_user(){
-		try {
-			
-$ionicConfig.backButton.text("");			
-		} catch(e){
-			console.log("%cerror: %cPage: `agenda_kegiatan` and field: `Custom Controller`","color:blue;font-size:18px","color:red;font-size:18px");
-			console.dir(e);
-		}
-	}
-	$scope.rating = {};
-	$scope.rating.max = 5;
-	
-	// animation ink (ionic-material)
-	ionicMaterialInk.displayEffect();
-	controller_by_user();
-})
-
 // TODO: dashboardCtrl --|-- 
 .controller("dashboardCtrl", function($ionicConfig,$scope,$rootScope,$state,$location,$ionicScrollDelegate,$ionicListDelegate,$http,$httpParamSerializer,$stateParams,$timeout,$interval,$ionicLoading,$ionicPopup,$ionicPopover,$ionicActionSheet,$ionicSlideBoxDelegate,$ionicHistory,ionicMaterialInk,ionicMaterialMotion,$window,$ionicModal,base64,md5,$document,$sce,$ionicGesture,$translate){
 	
@@ -642,8 +534,8 @@ $ionicConfig.backButton.text("");
 	controller_by_user();
 })
 
-// TODO: referensiCtrl --|-- 
-.controller("referensiCtrl", function($ionicConfig,$scope,$rootScope,$state,$location,$ionicScrollDelegate,$ionicListDelegate,$http,$httpParamSerializer,$stateParams,$timeout,$interval,$ionicLoading,$ionicPopup,$ionicPopover,$ionicActionSheet,$ionicSlideBoxDelegate,$ionicHistory,ionicMaterialInk,ionicMaterialMotion,$window,$ionicModal,base64,md5,$document,$sce,$ionicGesture,$translate){
+// TODO: faqsCtrl --|-- 
+.controller("faqsCtrl", function($ionicConfig,$scope,$rootScope,$state,$location,$ionicScrollDelegate,$ionicListDelegate,$http,$httpParamSerializer,$stateParams,$timeout,$interval,$ionicLoading,$ionicPopup,$ionicPopover,$ionicActionSheet,$ionicSlideBoxDelegate,$ionicHistory,ionicMaterialInk,ionicMaterialMotion,$window,$ionicModal,base64,md5,$document,$sce,$ionicGesture,$translate){
 	
 	$rootScope.headerExists = true;
 	$rootScope.ionWidth = $document[0].body.querySelector(".view-container").offsetWidth || 412;
@@ -661,18 +553,18 @@ $ionicConfig.backButton.text("");
 			$scope.scrollTop();
 		});
 	};
-	// TODO: referensiCtrl --|-- $scope.scrollTop
+	// TODO: faqsCtrl --|-- $scope.scrollTop
 	$rootScope.scrollTop = function(){
 		$timeout(function(){
 			$ionicScrollDelegate.$getByHandle("top").scrollTop();
 		},100);
 	};
-	// TODO: referensiCtrl --|-- $scope.openURL
+	// TODO: faqsCtrl --|-- $scope.openURL
 	// open external browser 
 	$scope.openURL = function($url){
 		window.open($url,"_system","location=yes");
 	};
-	// TODO: referensiCtrl --|-- $scope.openAppBrowser
+	// TODO: faqsCtrl --|-- $scope.openAppBrowser
 	// open AppBrowser
 	$scope.openAppBrowser = function($url){
 		var appBrowser = window.open($url,"_blank","hardwareback=Done");
@@ -688,7 +580,7 @@ $ionicConfig.backButton.text("");
 	};
 	
 	
-	// TODO: referensiCtrl --|-- $scope.openWebView
+	// TODO: faqsCtrl --|-- $scope.openWebView
 	// open WebView
 	$scope.openWebView = function($url){
 		var appWebview = window.open($url,"_blank","location=no");
@@ -704,7 +596,7 @@ $ionicConfig.backButton.text("");
 	};
 	
 	
-	// TODO: referensiCtrl --|-- $scope.toggleGroup
+	// TODO: faqsCtrl --|-- $scope.toggleGroup
 	$scope.toggleGroup = function(group) {
 		if ($scope.isGroupShown(group)) {
 			$scope.shownGroup = null;
@@ -717,7 +609,7 @@ $ionicConfig.backButton.text("");
 		return $scope.shownGroup === group;
 	};
 	
-	// TODO: referensiCtrl --|-- $scope.redirect
+	// TODO: faqsCtrl --|-- $scope.redirect
 	// redirect
 	$scope.redirect = function($url){
 		$window.location.href = $url;
@@ -731,14 +623,14 @@ $ionicConfig.backButton.text("");
 	}, 300);
 	// code 
 
-	// TODO: referensiCtrl --|-- controller_by_user
+	// TODO: faqsCtrl --|-- controller_by_user
 	// controller by user 
 	function controller_by_user(){
 		try {
 			
 $ionicConfig.backButton.text("");			
 		} catch(e){
-			console.log("%cerror: %cPage: `referensi` and field: `Custom Controller`","color:blue;font-size:18px","color:red;font-size:18px");
+			console.log("%cerror: %cPage: `faqs` and field: `Custom Controller`","color:blue;font-size:18px","color:red;font-size:18px");
 			console.dir(e);
 		}
 	}
@@ -750,8 +642,8 @@ $ionicConfig.backButton.text("");
 	controller_by_user();
 })
 
-// TODO: slide_tab_menuCtrl --|-- 
-.controller("slide_tab_menuCtrl", function($ionicConfig,$scope,$rootScope,$state,$location,$ionicScrollDelegate,$ionicListDelegate,$http,$httpParamSerializer,$stateParams,$timeout,$interval,$ionicLoading,$ionicPopup,$ionicPopover,$ionicActionSheet,$ionicSlideBoxDelegate,$ionicHistory,ionicMaterialInk,ionicMaterialMotion,$window,$ionicModal,base64,md5,$document,$sce,$ionicGesture,$translate){
+// TODO: helpCtrl --|-- 
+.controller("helpCtrl", function($ionicConfig,$scope,$rootScope,$state,$location,$ionicScrollDelegate,$ionicListDelegate,$http,$httpParamSerializer,$stateParams,$timeout,$interval,$ionicLoading,$ionicPopup,$ionicPopover,$ionicActionSheet,$ionicSlideBoxDelegate,$ionicHistory,ionicMaterialInk,ionicMaterialMotion,$window,$ionicModal,base64,md5,$document,$sce,$ionicGesture,$translate){
 	
 	$rootScope.headerExists = true;
 	$rootScope.ionWidth = $document[0].body.querySelector(".view-container").offsetWidth || 412;
@@ -769,18 +661,18 @@ $ionicConfig.backButton.text("");
 			$scope.scrollTop();
 		});
 	};
-	// TODO: slide_tab_menuCtrl --|-- $scope.scrollTop
+	// TODO: helpCtrl --|-- $scope.scrollTop
 	$rootScope.scrollTop = function(){
 		$timeout(function(){
 			$ionicScrollDelegate.$getByHandle("top").scrollTop();
 		},100);
 	};
-	// TODO: slide_tab_menuCtrl --|-- $scope.openURL
+	// TODO: helpCtrl --|-- $scope.openURL
 	// open external browser 
 	$scope.openURL = function($url){
 		window.open($url,"_system","location=yes");
 	};
-	// TODO: slide_tab_menuCtrl --|-- $scope.openAppBrowser
+	// TODO: helpCtrl --|-- $scope.openAppBrowser
 	// open AppBrowser
 	$scope.openAppBrowser = function($url){
 		var appBrowser = window.open($url,"_blank","hardwareback=Done");
@@ -796,7 +688,7 @@ $ionicConfig.backButton.text("");
 	};
 	
 	
-	// TODO: slide_tab_menuCtrl --|-- $scope.openWebView
+	// TODO: helpCtrl --|-- $scope.openWebView
 	// open WebView
 	$scope.openWebView = function($url){
 		var appWebview = window.open($url,"_blank","location=no");
@@ -812,7 +704,7 @@ $ionicConfig.backButton.text("");
 	};
 	
 	
-	// TODO: slide_tab_menuCtrl --|-- $scope.toggleGroup
+	// TODO: helpCtrl --|-- $scope.toggleGroup
 	$scope.toggleGroup = function(group) {
 		if ($scope.isGroupShown(group)) {
 			$scope.shownGroup = null;
@@ -825,7 +717,7 @@ $ionicConfig.backButton.text("");
 		return $scope.shownGroup === group;
 	};
 	
-	// TODO: slide_tab_menuCtrl --|-- $scope.redirect
+	// TODO: helpCtrl --|-- $scope.redirect
 	// redirect
 	$scope.redirect = function($url){
 		$window.location.href = $url;
@@ -839,14 +731,230 @@ $ionicConfig.backButton.text("");
 	}, 300);
 	// code 
 
-	// TODO: slide_tab_menuCtrl --|-- controller_by_user
+	// TODO: helpCtrl --|-- controller_by_user
 	// controller by user 
 	function controller_by_user(){
 		try {
 			
 $ionicConfig.backButton.text("");			
 		} catch(e){
-			console.log("%cerror: %cPage: `slide_tab_menu` and field: `Custom Controller`","color:blue;font-size:18px","color:red;font-size:18px");
+			console.log("%cerror: %cPage: `help` and field: `Custom Controller`","color:blue;font-size:18px","color:red;font-size:18px");
+			console.dir(e);
+		}
+	}
+	$scope.rating = {};
+	$scope.rating.max = 5;
+	
+	// animation ink (ionic-material)
+	ionicMaterialInk.displayEffect();
+	controller_by_user();
+})
+
+// TODO: menu_2Ctrl --|-- 
+.controller("menu_2Ctrl", function($ionicConfig,$scope,$rootScope,$state,$location,$ionicScrollDelegate,$ionicListDelegate,$http,$httpParamSerializer,$stateParams,$timeout,$interval,$ionicLoading,$ionicPopup,$ionicPopover,$ionicActionSheet,$ionicSlideBoxDelegate,$ionicHistory,ionicMaterialInk,ionicMaterialMotion,$window,$ionicModal,base64,md5,$document,$sce,$ionicGesture,$translate){
+	
+	$rootScope.headerExists = true;
+	$rootScope.ionWidth = $document[0].body.querySelector(".view-container").offsetWidth || 412;
+	$rootScope.grid64 = parseInt($rootScope.ionWidth / 64) ;
+	$rootScope.grid80 = parseInt($rootScope.ionWidth / 80) ;
+	$rootScope.grid128 = parseInt($rootScope.ionWidth / 128) ;
+	$rootScope.grid256 = parseInt($rootScope.ionWidth / 256) ;
+	$rootScope.last_edit = "menu" ;
+	$scope.$on("$ionicView.afterEnter", function (){
+		var page_id = $state.current.name ;
+		$rootScope.page_id = page_id.replace(".","-") ;
+	});
+	if($rootScope.headerShrink == true){
+		$scope.$on("$ionicView.enter", function(){
+			$scope.scrollTop();
+		});
+	};
+	// TODO: menu_2Ctrl --|-- $scope.scrollTop
+	$rootScope.scrollTop = function(){
+		$timeout(function(){
+			$ionicScrollDelegate.$getByHandle("top").scrollTop();
+		},100);
+	};
+	// TODO: menu_2Ctrl --|-- $scope.openURL
+	// open external browser 
+	$scope.openURL = function($url){
+		window.open($url,"_system","location=yes");
+	};
+	// TODO: menu_2Ctrl --|-- $scope.openAppBrowser
+	// open AppBrowser
+	$scope.openAppBrowser = function($url){
+		var appBrowser = window.open($url,"_blank","hardwareback=Done");
+		appBrowser.addEventListener("loadstart",function(){
+			appBrowser.insertCSS({
+				code: "body{background:#100;color:#100;font-size:1px;}body:after{content:'loading...';color:#fff;font-size:72px;position:absolute;bottom:50%;left:0;right:0; text-align: center; vertical-align: middle;}"
+			});
+		});
+	
+		appWebview.addEventListener("loaderror",function(){
+			window.location = "retry.html";
+		});
+	};
+	
+	
+	// TODO: menu_2Ctrl --|-- $scope.openWebView
+	// open WebView
+	$scope.openWebView = function($url){
+		var appWebview = window.open($url,"_blank","location=no");
+		appWebview.addEventListener("loadstart",function(){
+			appWebview.insertCSS({
+				code: "body{background:#100;color:#100;font-size:1px;}body:after{content:'loading...';color:#fff;font-size:72px;position:absolute;bottom:50%;left:0;right:0; text-align: center; vertical-align: middle;}"
+			});
+		});
+	
+		appWebview.addEventListener("loaderror",function(){
+			window.location = "retry.html";
+		});
+	};
+	
+	
+	// TODO: menu_2Ctrl --|-- $scope.toggleGroup
+	$scope.toggleGroup = function(group) {
+		if ($scope.isGroupShown(group)) {
+			$scope.shownGroup = null;
+		} else {
+			$scope.shownGroup = group;
+		}
+	};
+	
+	$scope.isGroupShown = function(group) {
+		return $scope.shownGroup === group;
+	};
+	
+	// TODO: menu_2Ctrl --|-- $scope.redirect
+	// redirect
+	$scope.redirect = function($url){
+		$window.location.href = $url;
+	};
+	
+	// Set Motion
+	$timeout(function(){
+		ionicMaterialMotion.slideUp({
+			selector: ".slide-up"
+		});
+	}, 300);
+	// code 
+
+	// TODO: menu_2Ctrl --|-- controller_by_user
+	// controller by user 
+	function controller_by_user(){
+		try {
+			
+$ionicConfig.backButton.text("");			
+		} catch(e){
+			console.log("%cerror: %cPage: `menu_2` and field: `Custom Controller`","color:blue;font-size:18px","color:red;font-size:18px");
+			console.dir(e);
+		}
+	}
+	$scope.rating = {};
+	$scope.rating.max = 5;
+	
+	// animation ink (ionic-material)
+	ionicMaterialInk.displayEffect();
+	controller_by_user();
+})
+
+// TODO: programCtrl --|-- 
+.controller("programCtrl", function($ionicConfig,$scope,$rootScope,$state,$location,$ionicScrollDelegate,$ionicListDelegate,$http,$httpParamSerializer,$stateParams,$timeout,$interval,$ionicLoading,$ionicPopup,$ionicPopover,$ionicActionSheet,$ionicSlideBoxDelegate,$ionicHistory,ionicMaterialInk,ionicMaterialMotion,$window,$ionicModal,base64,md5,$document,$sce,$ionicGesture,$translate){
+	
+	$rootScope.headerExists = true;
+	$rootScope.ionWidth = $document[0].body.querySelector(".view-container").offsetWidth || 412;
+	$rootScope.grid64 = parseInt($rootScope.ionWidth / 64) ;
+	$rootScope.grid80 = parseInt($rootScope.ionWidth / 80) ;
+	$rootScope.grid128 = parseInt($rootScope.ionWidth / 128) ;
+	$rootScope.grid256 = parseInt($rootScope.ionWidth / 256) ;
+	$rootScope.last_edit = "menu" ;
+	$scope.$on("$ionicView.afterEnter", function (){
+		var page_id = $state.current.name ;
+		$rootScope.page_id = page_id.replace(".","-") ;
+	});
+	if($rootScope.headerShrink == true){
+		$scope.$on("$ionicView.enter", function(){
+			$scope.scrollTop();
+		});
+	};
+	// TODO: programCtrl --|-- $scope.scrollTop
+	$rootScope.scrollTop = function(){
+		$timeout(function(){
+			$ionicScrollDelegate.$getByHandle("top").scrollTop();
+		},100);
+	};
+	// TODO: programCtrl --|-- $scope.openURL
+	// open external browser 
+	$scope.openURL = function($url){
+		window.open($url,"_system","location=yes");
+	};
+	// TODO: programCtrl --|-- $scope.openAppBrowser
+	// open AppBrowser
+	$scope.openAppBrowser = function($url){
+		var appBrowser = window.open($url,"_blank","hardwareback=Done");
+		appBrowser.addEventListener("loadstart",function(){
+			appBrowser.insertCSS({
+				code: "body{background:#100;color:#100;font-size:1px;}body:after{content:'loading...';color:#fff;font-size:72px;position:absolute;bottom:50%;left:0;right:0; text-align: center; vertical-align: middle;}"
+			});
+		});
+	
+		appWebview.addEventListener("loaderror",function(){
+			window.location = "retry.html";
+		});
+	};
+	
+	
+	// TODO: programCtrl --|-- $scope.openWebView
+	// open WebView
+	$scope.openWebView = function($url){
+		var appWebview = window.open($url,"_blank","location=no");
+		appWebview.addEventListener("loadstart",function(){
+			appWebview.insertCSS({
+				code: "body{background:#100;color:#100;font-size:1px;}body:after{content:'loading...';color:#fff;font-size:72px;position:absolute;bottom:50%;left:0;right:0; text-align: center; vertical-align: middle;}"
+			});
+		});
+	
+		appWebview.addEventListener("loaderror",function(){
+			window.location = "retry.html";
+		});
+	};
+	
+	
+	// TODO: programCtrl --|-- $scope.toggleGroup
+	$scope.toggleGroup = function(group) {
+		if ($scope.isGroupShown(group)) {
+			$scope.shownGroup = null;
+		} else {
+			$scope.shownGroup = group;
+		}
+	};
+	
+	$scope.isGroupShown = function(group) {
+		return $scope.shownGroup === group;
+	};
+	
+	// TODO: programCtrl --|-- $scope.redirect
+	// redirect
+	$scope.redirect = function($url){
+		$window.location.href = $url;
+	};
+	
+	// Set Motion
+	$timeout(function(){
+		ionicMaterialMotion.slideUp({
+			selector: ".slide-up"
+		});
+	}, 300);
+	// code 
+
+	// TODO: programCtrl --|-- controller_by_user
+	// controller by user 
+	function controller_by_user(){
+		try {
+			
+$ionicConfig.backButton.text("");			
+		} catch(e){
+			console.log("%cerror: %cPage: `program` and field: `Custom Controller`","color:blue;font-size:18px","color:red;font-size:18px");
 			console.dir(e);
 		}
 	}

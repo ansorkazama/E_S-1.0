@@ -5,17 +5,17 @@
 		<div class="dashboard-panel">
 			<!-- row -->
 			<div class="row">
-				<a class="col-33 light positive-bg ink" ng-click="openWebView('http://10.114.110.10/e-asn/e-schedule')" >
+				<a class="col-33 light positive-bg ink"  ng-href="#/aplikasi_e_schedule/dashboard" >
 					<i class="icon ion-ios-home" ></i>
-					<p>{{ "Home" | translate }}</p>
+					<p>{{ "Dashboard" | translate }}</p>
 				</a>
-				<a class="col-33 light positive-900-bg ink" ng-click="openWebView('http://10.114.110.10/e-asn/e-schedule/program')" >
-					<i class="icon ion-android-funnel" ></i>
-					<p>{{ "Referensi" | translate }}</p>
+				<a class="col-33 light positive-900-bg ink"  ng-href="#/aplikasi_e_schedule/program" >
+					<i class="icon ion-android-favorite" ></i>
+					<p>{{ "Program" | translate }}</p>
 				</a>
-				<a class="col-33 light calm-bg ink" ng-click="openWebView('http://diskominfo.sumutprov.go.id')" >
-					<i class="icon ion-android-calendar" ></i>
-					<p>{{ "Agenda Kegiatan" | translate }}</p>
+				<a class="col-33 light calm-bg ink"  ng-href="#/aplikasi_e_schedule/menu_2" >
+					<i class="icon ion-android-favorite" ></i>
+					<p>{{ "Kegiatan" | translate }}</p>
 				</a>
 			</div>
 			<!-- ./row -->
@@ -23,13 +23,13 @@
 
 			<!-- row -->
 			<div class="row">
-				<a class="col-33 light calm-900-bg ink" ng-click="openWebView('http://diskominfo.sumutprov.go.id')" >
-					<i class="icon ion-ios-barcode-outline" ></i>
-					<p>{{ "Pengumuman" | translate }}</p>
+				<a class="col-33 light calm-900-bg ink"  ng-href="#/aplikasi_e_schedule/help" >
+					<i class="icon ion-help-circled" ></i>
+					<p>{{ "Gallery" | translate }}</p>
 				</a>
-				<a class="col-33 light balanced-bg ink" ng-click="exitApp()" >
-					<i class="icon ion-log-out" ></i>
-					<p>{{ "Logout" | translate }}</p>
+				<a class="col-33 light balanced-bg ink"  ng-href="#/aplikasi_e_schedule/faqs" >
+					<i class="icon ion-android-chat" ></i>
+					<p>{{ "Pengumuman" | translate }}</p>
 				</a>
 			</div>
 			<!-- ./row -->

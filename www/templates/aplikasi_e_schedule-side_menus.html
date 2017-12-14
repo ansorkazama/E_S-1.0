@@ -19,20 +19,20 @@
 		</ion-header-bar>
 		<ion-content class="has-expanded-header light-bg positive-900">
 			<ion-list class="list" >
-				<ion-item  class="menu-dashboard item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ng-click="openWebView('http://10.114.110.10/e-asn/e-schedule')">
-					<i class="icon ion-ios-home"></i> {{ "Home" | translate }}
+				<ion-item  class="menu-dashboard item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="aplikasi_e_schedule.dashboard">
+					<i class="icon ion-ios-home"></i> {{ "Dashboard" | translate }}
 				</ion-item>
-				<ion-item  class="menu-referensi item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ng-click="openWebView('http://10.114.110.10/e-asn/e-schedule/program')">
-					<i class="icon ion-android-funnel"></i> {{ "Referensi" | translate }}
+				<ion-item  class="menu-program item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="aplikasi_e_schedule.program">
+					<i class="icon ion-android-favorite"></i> {{ "Program" | translate }}
 				</ion-item>
-				<ion-item  class="menu-agenda_kegiatan item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ng-click="openWebView('http://diskominfo.sumutprov.go.id')">
-					<i class="icon ion-android-calendar"></i> {{ "Agenda Kegiatan" | translate }}
+				<ion-item  class="menu-menu_2 item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="aplikasi_e_schedule.menu_2">
+					<i class="icon ion-android-favorite"></i> {{ "Kegiatan" | translate }}
 				</ion-item>
-				<ion-item  class="menu-pengumuman item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ng-click="openWebView('http://diskominfo.sumutprov.go.id')">
-					<i class="icon ion-ios-barcode-outline"></i> {{ "Pengumuman" | translate }}
+				<ion-item  class="menu-help item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="aplikasi_e_schedule.help">
+					<i class="icon ion-help-circled"></i> {{ "Gallery" | translate }}
 				</ion-item>
-				<ion-item  class="menu-logout item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ng-click="exitApp()">
-					<i class="icon ion-log-out"></i> {{ "Logout" | translate }}
+				<ion-item  class="menu-faqs item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="aplikasi_e_schedule.faqs">
+					<i class="icon ion-android-chat"></i> {{ "Pengumuman" | translate }}
 				</ion-item>
 			</ion-list>
 		</ion-content>
