@@ -191,6 +191,19 @@ angular.module("aplikasi_e_schedule", ["ngCordova","ionic","ionMdInput","ionic-m
 		}
 	})
 
+	.state("aplikasi_e_schedule.gallery", {
+		url: "/gallery",
+		views: {
+			"aplikasi_e_schedule-side_menus" : {
+						templateUrl:"templates/aplikasi_e_schedule-gallery.html",
+						controller: "galleryCtrl"
+					},
+			"fabButtonUp" : {
+						template: '',
+					},
+		}
+	})
+
 	.state("aplikasi_e_schedule.help", {
 		url: "/help",
 		views: {
@@ -204,12 +217,38 @@ angular.module("aplikasi_e_schedule", ["ngCordova","ionic","ionMdInput","ionic-m
 		}
 	})
 
+	.state("aplikasi_e_schedule.kegiatan", {
+		url: "/kegiatan",
+		views: {
+			"aplikasi_e_schedule-side_menus" : {
+						templateUrl:"templates/aplikasi_e_schedule-kegiatan.html",
+						controller: "kegiatanCtrl"
+					},
+			"fabButtonUp" : {
+						template: '',
+					},
+		}
+	})
+
 	.state("aplikasi_e_schedule.menu_2", {
 		url: "/menu_2",
 		views: {
 			"aplikasi_e_schedule-side_menus" : {
 						templateUrl:"templates/aplikasi_e_schedule-menu_2.html",
 						controller: "menu_2Ctrl"
+					},
+			"fabButtonUp" : {
+						template: '',
+					},
+		}
+	})
+
+	.state("aplikasi_e_schedule.pengumuman", {
+		url: "/pengumuman",
+		views: {
+			"aplikasi_e_schedule-side_menus" : {
+						templateUrl:"templates/aplikasi_e_schedule-pengumuman.html",
+						controller: "pengumumanCtrl"
 					},
 			"fabButtonUp" : {
 						template: '',
