@@ -1,9 +1,9 @@
 angular.module("aplikasi_e_schedule", ["ngCordova","ionic","ionMdInput","ionic-material","ion-datetime-picker","ionic.rating","utf8-base64","angular-md5","chart.js","pascalprecht.translate","aplikasi_e_schedule.controllers", "aplikasi_e_schedule.services"])
 	.run(function($ionicPlatform,$window,$interval,$timeout,$ionicHistory,$ionicPopup,$state,$rootScope){
 
-		$rootScope.appName = "Aplikasi E-Schedule" ;
+		$rootScope.appName = "E-Schedule" ;
 		$rootScope.appLogo = "data/images/header/logo_diskominfo_sumatera_utara.png" ;
-		$rootScope.appVersion = "1.0" ;
+		$rootScope.appVersion = "1.1" ;
 		$rootScope.headerShrink = false ;
 
 		$ionicPlatform.ready(function() {
@@ -155,6 +155,7 @@ angular.module("aplikasi_e_schedule", ["ngCordova","ionic","ionMdInput","ionic-m
 			new RegExp('^(http[s]?):\/\/(w{3}.)?youtube\.com/.+$'),
 			new RegExp('^(http[s]?):\/\/(w{3}.)?w3schools\.com/.+$'),
 			new RegExp('^(http[s]?):\/\/(w{3}.)?google\.com/.+$'),
+			new RegExp('^(http[s]?):\/\/(w{3}.)?asn\.sumutprov\.go\.id/.+$'),
 		]);
 	}catch(err){
 		console.log("%cerror: %cdomain whitelist","color:blue;font-size:16px;","color:red;font-size:16px;");
