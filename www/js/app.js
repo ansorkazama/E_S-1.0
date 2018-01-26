@@ -19,6 +19,22 @@ angular.module("aplikasi_e_schedule", ["ngCordova","ionic","ionMdInput","ionic-m
 			}
 
 
+			//required: cordova plugin add onesignal-cordova-plugin --save
+			if(window.plugins && window.plugins.OneSignal){
+				window.plugins.OneSignal.enableNotificationsWhenActive(true);
+				var notificationOpenedCallback = function(jsonData){
+					try {
+						$timeout(function(){
+							$window.location = "#/aplikasi_e_schedule/" + jsonData.notification.payload.additionalData.page ;
+						},200);
+					} catch(e){
+						console.log("onesignal:" + e);
+					}
+				}
+				window.plugins.OneSignal.startInit("6685dc9c-4179-4c44-937b-e5f9b1206e42").handleNotificationOpened(notificationOpenedCallback).endInit();
+			}    
+
+
 		});
 		$ionicPlatform.registerBackButtonAction(function (e){
 			if($ionicHistory.backView()){
